@@ -34,7 +34,7 @@ struct ContentView: View {
         NavigationView {
             VStack(alignment:.leading) {
                 
-                
+                ReserveDateView()
                 
                 VStack (alignment: .center){
                     Text("Little Lemon").font(.system(size: sliderValue * 2))
