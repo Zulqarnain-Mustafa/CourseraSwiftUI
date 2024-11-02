@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextFieldWithImage: View {
     
-    @State private var text: String = ""
+    @Binding var text: String
     
     @State var isHidePlaceholder: Bool = false
     
@@ -27,6 +27,8 @@ struct TextFieldWithImage: View {
                 
                 if isSecureTextEntry {
                     SecureField("", text: $text)
+                        .font(.custom("Roboto-Regular", size: 14.0))
+                        .fontWeight(.medium)
                         .textFieldStyle(.plain)
                         .onChange(of: text) { oldValue, newValue in
                             if newValue.count > 0 {
@@ -38,6 +40,8 @@ struct TextFieldWithImage: View {
                         }
                 }else{
                     TextField("", text: $text)
+                        .font(.custom("Roboto-Bold", size: 14.0))
+                        .fontWeight(.medium)
                         .textFieldStyle(.plain)
                         .onChange(of: text) { oldValue, newValue in
                             if newValue.count > 0 {
@@ -61,5 +65,8 @@ struct TextFieldWithImage: View {
 }
 
 #Preview {
-    TextFieldWithImage()
+    
+    @Previewable @State var text: String = ""
+    
+    TextFieldWithImage(text: $text)
 }
