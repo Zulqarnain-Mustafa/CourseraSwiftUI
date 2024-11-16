@@ -14,9 +14,9 @@ struct PopupAlertView: View {
             VStack {
                 HStack {
                     Spacer()
-                    Button("", image: ImageResource(name: "cross-ic", bundle: .main)) {
-                        
-                    }.foregroundStyle(Color.gray909A9A)
+//                    Button("", image: ImageResource(name: "cross-ic", bundle: .main)) {
+//                        
+//                    }.foregroundStyle(Color.gray909A9A)
                 }
                 Spacer()
                 Text("Hello, World!")
