@@ -12,23 +12,26 @@ struct AppNavigationView: View {
     var title : String = ""
     
     var body: some View {
-        ZStack{
-            Color.blue005ED2
-            VStack(alignment: .center){
-                Text("Passport").font(.custom("PlusJakartaSans-Bold", size: 24.0))
-                    .foregroundStyle(Color.white)
-            }
-            HStack(){
-               
-                Button {
-                    
-                } label: {
-                    Image("back-arrow-ic").resizable().scaledToFit().frame(width: 30.0, height: 30.0)
+        VStack{
+            ZStack{
+                Color.blue005ED2.ignoresSafeArea(edges: .top)
+                VStack(alignment: .center){
+                    Text("Passport").font(.custom("PlusJakartaSans-Bold", size: 24.0))
+                        .foregroundStyle(Color.white)
                 }
+                HStack(){
+                   
+                    Button {
+                        
+                    } label: {
+                        Image("back-arrow-ic").resizable().scaledToFit().frame(width: 30.0, height: 30.0)
+                    }
 
-                Spacer()
-            }.padding()
-        }.ignoresSafeArea()
+                    Spacer()
+                }.padding()
+                   
+            }
+        }
     }
 }
 

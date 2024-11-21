@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PopularCellView: View {
+    
+    var optionTitle = ""
+    
     var body: some View {
         ZStack {
             Color.blue005ED240
@@ -28,7 +31,7 @@ struct PopularCellView: View {
                 .frame(width: 44.0, height: 44.0)
                 
                 VStack(spacing:2.0){
-                    Text("Passport")
+                    Text(optionTitle)
                         .font(.custom("PlusJakarta", size:12.0))
                         .foregroundStyle(Color.blue005ED2)
                     Text("Passport").font(.custom("PlusJakarta", size: 10.0))
